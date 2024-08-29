@@ -18,8 +18,8 @@ const serviceSeed = require('./service.json')
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
-    await User.bulkCreate(userSeed, { individualHooks: true });
-    await Auth.bulkCreate(authSeed);
+    await User.bulkCreate(userSeed);
+    await Auth.bulkCreate(authSeed, { individualHooks: true });
     await Charity.bulkCreate(charitySeed);
     await CharityToUser.bulkCreate(charityToUserSeed);
     await Category.bulkCreate(categorySeed);
