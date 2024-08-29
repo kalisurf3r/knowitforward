@@ -32,8 +32,8 @@
         "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
         "email": "jimpa@gmail.com",
         "ratings": 5.0,
-        "profession": "",
-        "profileImgUrl": ""
+        "profession": null,
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
     },
     {
         "firstName": "Sheldon",
@@ -42,7 +42,7 @@
         "email": "sc@gmail.com",
         "ratings": 5.0,
         "profession": "Chartered Accountant",
-        "profileImgUrl": ""
+        "profileImgUrl": null
     },
     {
         "firstName": "Leonard ",
@@ -51,7 +51,7 @@
         "email": "lha@gmail.com",
         "ratings": 5.0,
         "profession": "Photographer",
-        "profileImgUrl": ""
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
     },
     {
         "firstName": "Penny",
@@ -59,7 +59,7 @@
         "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
         "email": "penny@gmail.com",
         "ratings": 5.0,
-        "profession": "",
-        "profileImgUrl": ""
+        "profession": null,
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
     }
 ]
