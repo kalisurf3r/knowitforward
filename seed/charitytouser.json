@@ -1,0 +1,38 @@
+[
+    {
+        "CharityId": 1,
+        "UserId": 1
+    },
+    {
+        "CharityId": 2,
+        "UserId": 1
+    },
+    {
+        "CharityId": 3,
+        "UserId": 1
+    },
+    {
+        "CharityId": 3,
+        "UserId": 2
+    },
+    {
+        "CharityId": 4,
+        "UserId": 2
+    },
+    {
+        "CharityId": 5,
+        "UserId": 2
+    },
+    {
+        "CharityId": 6,
+        "UserId": 3
+    },
+    {
+        "CharityId": 1,
+        "UserId": 3
+    },
+    {
+        "CharityId": 2,
+        "UserId": 3
+    }
+]
