@@ -48,17 +48,17 @@ function pruneActiveAndNotBookedServices(entries) {
     const expiredServices = [];
     for (let svc of entries) {
         const offerEndDate = svc.dataValues.offerEndDate;
-        console.log("offer end date: ", offerEndDate);
-        console.log('offer end date type: ', typeof (offerEndDate));
         const offerEndDatedtObj = new Date(offerEndDate);
         const diff = offerEndDatedtObj - Date.now();
-        console.log("time diff: ", diff)
-        if (diff > 0) {
+        if (diff > 0 && svc.dataValues.status === 'Active') {
             const timeLeft = getTimeLeftInHumanReadableForm(diff);
             svc.dataValues.timeLeft = timeLeft;
             activeServices.push(svc)
-        } else {
+        } else if (diff <= 0 && svc.dataValues.status === 'Active') {
             expiredServices.push(svc);
+        } else {
+            console.log("push into else");
+            activeServices.push(svc);
         }
     }
 
@@ -85,13 +85,11 @@ router.get("/", async (req, res) => {
 
         const prunedResults = pruneActiveAndNotBookedServices(svcData);
         console.log("Returning active svcs as: ", prunedResults);
-
-        // TODO: Prune the records that are active and not booked
         res.status(200).json({ status: 200, data: prunedResults, err: "" })
 
     } catch (err) {
         console.log("Error when trying to get all active: ", err);
-        if (err?.message === "invalid token" || err?.message === "jwt expired" ) {
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
             return res.status(403).json({ status: 403, data: [], error: err });
         }
 
@@ -118,7 +116,7 @@ router.get("/:id", async (req, res) => {
 
     } catch (err) {
         console.log("Error when trying to get a svc id: ", err);
-        if (err?.message === "invalid token" || err?.message === "jwt expired" ) {
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
             return res.status(403).json({ status: 403, data: [], error: err });
         }
 
@@ -140,13 +138,14 @@ router.get("/serviceprovider/:id", async (req, res) => {
                 ServiceProviderId: req.params.id
             }
         })
+        console.log("Returning active svcs before as: ", svcData);
         const prunedResults = pruneActiveAndNotBookedServices(svcData);
         console.log("Returning active svcs as: ", prunedResults);
         res.status(200).json({ status: 200, data: prunedResults, err: "" })
 
     } catch (err) {
         console.log("Error when trying to get services by service provider id ", err);
-        if (err?.message === "invalid token" || err?.message === "jwt expired" ) {
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
             return res.status(403).json({ status: 403, data: [], error: err });
         }
 
@@ -175,7 +174,7 @@ router.get("/customer/:id", async (req, res) => {
 
     } catch (err) {
         console.log("Error when trying to get services by customer id: ", err);
-        if (err?.message === "invalid token" || err?.message === "jwt expired" ) {
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
             return res.status(403).json({ status: 403, data: [], error: err });
         }
 
