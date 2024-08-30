@@ -7,13 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "npm seed/index.js"
+    "seed": "node seed/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "brcypt": "^1.0.1",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "pg": "^8.12.0",

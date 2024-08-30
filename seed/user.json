@@ -1,0 +1,65 @@
+[
+    {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
+        "email": "jado@gmail.com",
+        "ratings": 5.0,
+        "profession": "Software development, math tutor",
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964284/person1_cw7hxz.jpg"
+    },
+    {
+        "firstName": "Jessica",
+        "lastName": "Johnson",
+        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
+        "email": "jj@gmail.com",
+        "ratings": 5.0,
+        "profession": "UI/UX instructor, wellness and career coach",
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+    },
+    {
+        "firstName": "John",
+        "lastName": "Paul",
+        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
+        "email": "jp@gmail.com",
+        "ratings": 5.0,
+        "profession": "Teacher and Music instructor",
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964339/person2_rrtvou.jpg"
+    },
+    {
+        "firstName": "Jim",
+        "lastName": "Parsons",
+        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
+        "email": "jimpa@gmail.com",
+        "ratings": 5.0,
+        "profession": null,
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+    },
+    {
+        "firstName": "Sheldon",
+        "lastName": "Cooper",
+        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
+        "email": "sc@gmail.com",
+        "ratings": 5.0,
+        "profession": "Chartered Accountant",
+        "profileImgUrl": null
+    },
+    {
+        "firstName": "Leonard ",
+        "lastName": "Hofstadter",
+        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
+        "email": "lha@gmail.com",
+        "ratings": 5.0,
+        "profession": "Photographer",
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+    },
+    {
+        "firstName": "Penny",
+        "lastName": "P",
+        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
+        "email": "penny@gmail.com",
+        "ratings": 5.0,
+        "profession": null,
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+    }
+]
