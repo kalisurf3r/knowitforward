@@ -117,7 +117,7 @@ router.get("/:id", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get a svc id: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status().json({ status: , data: [], error: err });
+            return res.status().json({ status: 403, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
