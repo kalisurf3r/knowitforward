@@ -7,10 +7,12 @@ CharityToUser.init(
     {
         CharityId: {
             type: DataTypes.INTEGER,
+            unique: true,
             allowNull: false
         },
         UserId: {
             type: DataTypes.INTEGER,
+            unique: true,
             allowNull: false
         }
     },
