@@ -36,7 +36,9 @@ User.hasMany(Service, { as: "ServicesBooked", foreignKey: "CustomerId" })
 User.hasOne(Auth, {
     onDelete: "CASCADE",
 }); //user foreign key defined in auth
-Auth.belongsTo(User);
+Auth.belongsTo(User, {
+    onDelete: "CASCADE",
+});
 
 module.exports = {
     Auth,
