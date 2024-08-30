@@ -90,7 +90,7 @@ router.get("/", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get all active: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status(401).json({ status: 401, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -117,7 +117,7 @@ router.get("/:id", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get a svc id: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status().json({ status: , data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -146,7 +146,7 @@ router.get("/serviceprovider/:id", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get services by service provider id ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status(401).json({ status: 401, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -175,7 +175,7 @@ router.get("/customer/:id", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get services by customer id: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status(401).json({ status: 401, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });

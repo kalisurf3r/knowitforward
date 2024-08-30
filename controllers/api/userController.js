@@ -28,7 +28,7 @@ async function getRandomCharities() {
     } catch (err) {
         console.log("Error while trying to associate charities to users: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status(401).json({ status: 401, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -105,7 +105,7 @@ router.post("/", async (req, res) => {
     } catch (err) {
         console.log("Unexpected error when registering a user: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status(401).json({ status: 401, data: [], error: err });
         }
         res.status(500).json({ status: 500, data: [], error: err });
     };
@@ -145,7 +145,7 @@ router.post("/login", async (req, res) => {
         res.status(200).json({ status: 200, data: userObj, error: "" })
     } catch (err) {
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status(401).json({ status: 401, data: [], error: err });
         }
 
         console.log("Unexpected error during login: ", err);
@@ -166,7 +166,7 @@ router.get("/:id", async (req, res) => {
 
     } catch (err) {
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(403).json({ status: 403, data: [], error: err });
+            return res.status(401).json({ status: 401, data: [], error: err });
         }
 
         console.log("Error when trying to get user by id: ", err);
