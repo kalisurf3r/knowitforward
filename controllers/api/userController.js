@@ -27,6 +27,10 @@ async function getRandomCharities() {
         return visited;
     } catch (err) {
         console.log("Error while trying to associate charities to users: ", err);
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
+            return res.status(403).json({ status: 403, data: [], error: err });
+        }
+
         res.status(500).json({ status: 500, data: [], error: err });
     };
 
@@ -91,7 +95,7 @@ router.post("/", async (req, res) => {
             },
             process.env.JWT_SECRET,
             {
-                expiresIn: "10m"  //TODO: Increase
+                expiresIn: "6h"  //TODO: Increase
             }
         );
         userObj.dataValues.token = tkn;
@@ -100,6 +104,9 @@ router.post("/", async (req, res) => {
 
     } catch (err) {
         console.log("Unexpected error when registering a user: ", err);
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
+            return res.status(403).json({ status: 403, data: [], error: err });
+        }
         res.status(500).json({ status: 500, data: [], error: err });
     };
 });
@@ -129,7 +136,7 @@ router.post("/login", async (req, res) => {
             },
             process.env.JWT_SECRET,
             {
-                expiresIn: "10m" //TODO: Increase
+                expiresIn: "6h" //TODO: Increase
             }
         );
 
@@ -137,6 +144,10 @@ router.post("/login", async (req, res) => {
         userObj.dataValues.token = tkn;
         res.status(200).json({ status: 200, data: userObj, error: "" })
     } catch (err) {
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
+            return res.status(403).json({ status: 403, data: [], error: err });
+        }
+
         console.log("Unexpected error during login: ", err);
         res.status(500).json({ status: 500, data: [], error: err });
     };
@@ -154,6 +165,10 @@ router.get("/:id", async (req, res) => {
         res.status(200).json({ status: 200, data: userData, err: "" })
 
     } catch (err) {
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
+            return res.status(403).json({ status: 403, data: [], error: err });
+        }
+
         console.log("Error when trying to get user by id: ", err);
         res.status(500).json({ status: 500, data: [], error: err });
     };

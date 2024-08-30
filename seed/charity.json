@@ -3,42 +3,48 @@
         "charityName": "Unicef",
         "charityDesc": "UNICEF is on the ground in 190 countries and territories, providing children with the lifesaving supplies and assistance they desperately need.",
         "wallet": 500,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964711/UNICEF-logo_ctq9tt.png",
+        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964711/UNICEF-logo_ctq9tt.png",
+        "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964711/UNICEF-logo_ctq9tt.png",
         "websiteUrl": "https://www.unicefusa.org/"
     },
     {
         "charityName": "Save the Children",
         "charityDesc": "The Save the Children Fund, commonly known as Save the Children, is an international, non-governmental organization. It was founded in the UK in 1919, with the goal of helping improve the lives of children worldwide",
         "wallet": 700,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964710/save-the-children-logo_ffd3qp.png",
+        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964710/save-the-children-logo_ffd3qp.png",
+        "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964710/save-the-children-logo_ffd3qp.png",
         "websiteUrl": "https://www.savethechildren.org/"
     },
     {
         "charityName": "American Red Cross",
         "charityDesc": "The American National Red Cross, is a nonprofit humanitarian organization that provides emergency assistance, disaster relief, and disaster preparedness education in the United States.",
         "wallet": 900,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964710/red-cross-logo_ttuuyw.png",
+        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964710/red-cross-logo_ttuuyw.png",
+        "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964710/red-cross-logo_ttuuyw.png",
         "websiteUrl": "https://www.redcross.org/"
     },
     {
         "charityName": "Habitat for Humanity",
         "charityDesc": "Habitat for Humanity International (HFHI), generally referred to as Habitat for Humanity or Habitat, is a U.S. non-governmental, and tax-exempt 501(C)(3) Christian nonprofit organization which seeks to build affordable housing.",
         "wallet": 1100,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964709/Habitat-For-Humanity-Logo_hqmbse.png",
+        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964709/Habitat-For-Humanity-Logo_hqmbse.png",
+        "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964709/Habitat-For-Humanity-Logo_hqmbse.png",
         "websiteUrl": "https://www.habitat.org/"
     },
     {
         "charityName": "Jane Goodall Institute",
         "charityDesc": "We are a global community conservation organization that advances the vision and work of Dr. Jane Goodall. By protecting chimpanzees and inspiring people to conserve the natural world we all share, we improve the lives of people, animals and the environment. Everything is connected—everyone can make a difference.",
         "wallet": 1200,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964709/Jane-Goodall-logo_jdoefm.png",
+        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964709/Jane-Goodall-logo_jdoefm.png",
+        "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964709/Jane-Goodall-logo_jdoefm.png",
         "websiteUrl": "https://janegoodall.org/"
     },
     {
         "charityName": "Feeding America",
         "charityDesc": "Feeding America is a United States–based non-profit organization that is a nationwide network of more than 200 food banks that feed more than 46 million people through food pantries, soup kitchens, shelters, and other community-based agencies. Forbes ranks it as the largest U.S. charity by revenue.",
         "wallet": 1500,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964708/feeding-america-logo_ng74xh.png",
+        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964708/feeding-america-logo_ng74xh.png",
+        "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964708/feeding-america-logo_ng74xh.png",
         "websiteUrl": "https://www.feedingamerica.org/"
     }
 ]
