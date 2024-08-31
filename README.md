@@ -16,6 +16,13 @@
 - get services by service provider id: `GET /api/services/serviceprovider/:id`
 - get services by customer id: `GET /api/services/customer/:id`
 - get a service by id: `GET /api/services/:id`
+- get all charities: `GET /api/charities`
+- get all categories: `GET /api/categories`
+- update status for a service: `PUT /api/services/:id`
+- create a new service: `POST /api/service`
+- [PENDING] get active services by different filter: `GET /api/services?category=Software`
+- [PENDING] get user id from token: `GET /api/token`
+- [PENDING] stripe webtoken: `POST /api/processpayment`
 
 ## Steps to make api calls
 - first call login -- you can use a username pwd from the seed/auth.json file.
@@ -46,6 +53,29 @@
 		"username": "ank1",
 		"password": "password"
 }
+
+```
+
+## request body for PUT /api/services/:id
+```
+{
+		"action": "Done"
+}
+```
+
+## request body for POST /api/services
+```
+  {
+    "title": "1hr Web Development Consultation",
+    "description": "A one-hour consultation on web development best practices and strategies.",
+    "basePrice": 100.0,
+    "serviceDate": "2024-09-20T16:00:00Z",
+    "charity": "Unicef",
+    "category": "Software",
+    "offerEndDate": "2024-09-15T23:59:59Z",
+    "paymentLink": null,
+		"ServiceProvideId": 8
+  }
 
 ```
 
