@@ -7,7 +7,8 @@ Charity.init(
     {
         charityName: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
         },
         charityDesc: {
             type: DataTypes.TEXT,
@@ -19,7 +20,7 @@ Charity.init(
         },
         logoImgUrl: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         websiteUrl: {
             type: DataTypes.STRING,

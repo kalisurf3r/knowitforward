@@ -73,7 +73,7 @@ router.post("/", async (req, res) => {
         console.log("Create a record in user tbl with data: ", req.body);
 
         const userObj = await User.create(req.body);
-        console.log("Got back newly user obj as: ", userObj);
+        console.log("Got back newly created user obj as: ", userObj);
         console.log("Updating the charity info");
         for (let id of charities) {
             await CharityToUser.create({
@@ -161,8 +161,8 @@ router.get("/:id", async (req, res) => {
         jwt.verify(tkn, process.env.JWT_SECRET);
         const userData = await User.findByPk(req.params.id, {
             include: [Charity]
-        })
-        res.status(200).json({ status: 200, data: userData, err: "" })
+        });
+        res.status(200).json({ status: 200, data: userData, err: "" });
 
     } catch (err) {
         if (err?.message === "invalid token" || err?.message === "jwt expired") {

@@ -17,7 +17,7 @@ Service.init(
             type: DataTypes.FLOAT,
             allowNull: false
         },
-        scheduledOn: {
+        serviceDate: {
             type: DataTypes.DATE,
             allowNull: false
         },
