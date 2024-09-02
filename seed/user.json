@@ -6,7 +6,8 @@
         "email": "jado@gmail.com",
         "ratings": 5.0,
         "profession": "Software development, math tutor",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964284/person1_cw7hxz.jpg"
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964284/person1_cw7hxz.jpg",
+        "calendarUrl": null
     },
     {
         "firstName": "Jessica",
@@ -15,7 +16,8 @@
         "email": "jj@gmail.com",
         "ratings": 5.0,
         "profession": "UI/UX instructor, wellness and career coach",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
+        "calendarUrl": null
     },
     {
         "firstName": "John",
@@ -24,7 +26,8 @@
         "email": "jp@gmail.com",
         "ratings": 5.0,
         "profession": "Teacher and Music instructor",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964339/person2_rrtvou.jpg"
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964339/person2_rrtvou.jpg",
+        "calendarUrl": null
     },
     {
         "firstName": "Jim",
@@ -33,7 +36,8 @@
         "email": "jimpa@gmail.com",
         "ratings": 5.0,
         "profession": null,
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
+        "calendarUrl": null
     },
     {
         "firstName": "Sheldon",
@@ -42,7 +46,8 @@
         "email": "sc@gmail.com",
         "ratings": 5.0,
         "profession": "Chartered Accountant",
-        "profileImgUrl": null
+        "profileImgUrl": null,
+        "calendarUrl": null
     },
     {
         "firstName": "Leonard ",
@@ -51,7 +56,8 @@
         "email": "lha@gmail.com",
         "ratings": 5.0,
         "profession": "Photographer",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
+        "calendarUrl": null
     },
     {
         "firstName": "Penny",
@@ -60,6 +66,7 @@
         "email": "penny@gmail.com",
         "ratings": 5.0,
         "profession": null,
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg"
+        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
+        "calendarUrl": null
     }
 ]

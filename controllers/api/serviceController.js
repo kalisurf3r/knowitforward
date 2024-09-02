@@ -123,7 +123,10 @@ router.get("/", async (req, res) => {
         const svcData = await Service.findAll({
             where: {
                 status: 'Active'
-            }
+            },
+            order: [
+                ['serviceDate', 'ASC']
+            ]
         });
 
         const prunedResults = pruneActiveAndNotBookedServices(svcData);
@@ -133,7 +136,7 @@ router.get("/", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get all active: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(401).json({ status: 401, data: [], error: err });
+            return res.status(403).json({ status: 403, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -176,10 +179,16 @@ router.get("/serviceprovider/:id", async (req, res) => {
         jwt.verify(tkn, process.env.JWT_SECRET);
         console.log("Get all services for service provider with id as: ", req.params.id);
         const svcData = await Service.findAll({
-            include: [{ model: User, as: 'ServiceProvider' }],
+            include: [
+                { model: User, as: 'ServiceProvider' },
+                { model: User, as: 'Customer' }
+            ],
             where: {
                 ServiceProviderId: req.params.id
-            }
+            },
+            order: [
+                ['serviceDate', 'ASC']
+            ]
         });
         console.log("Returning active svcs before as: ", svcData);
         const prunedResults = pruneActiveAndNotBookedServices(svcData);
@@ -189,7 +198,7 @@ router.get("/serviceprovider/:id", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get services by service provider id ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(401).json({ status: 401, data: [], error: err });
+            return res.status(403).json({ status: 403, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -218,7 +227,7 @@ router.get("/customer/:id", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get services by customer id: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(401).json({ status: 401, data: [], error: err });
+            return res.status(403).json({ status: 403, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -234,20 +243,24 @@ router.put("/:id", async (req, res) => {
         console.log("Verifying token");
         jwt.verify(tkn, process.env.JWT_SECRET);
 
-        const action = req.body.action;
-        let status;
+        const action = req.body?.action;
+        const userId = req.body?.userid;
+        let fieldsToUpdate = {};
+
         if (action.toLowerCase() === "book") {
-            status = "Booked";
+            fieldsToUpdate['status'] = 'Booked';
+            fieldsToUpdate['CustomerId'] = userId;
         } else if (action.toLowerCase() === "done") {
-            status = "Ready for payment";
+            fieldsToUpdate['status'] = 'Ready for payment';
             // TODO: Generate the payment link for this service and update DB
         } else if (action.toLowerCase() === "cancel") {
-            status = "Closed";
+            fieldsToUpdate['status'] = 'Closed';
         }
         let data = [];
-        if (status) {
-            console.log(`Updating status for record with id: ${req.params.id} to: ${status}`);
-            data = await Service.update({ status: status }, {
+        if (fieldsToUpdate) {
+            console.log("Updating status for record with id: " + req.params.id + " with: ");
+            console.log(fieldsToUpdate);
+            data = await Service.update(fieldsToUpdate, {
                 where: {
                     id: req.params.id
                 }
@@ -262,7 +275,7 @@ router.put("/:id", async (req, res) => {
     catch (err) {
         console.log("Error when trying to update services by svc id: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status(401).json({ status: 401, data: [], error: err });
+            return res.status(403).json({ status: 403, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
@@ -297,15 +310,62 @@ router.post("/", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to post a service: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            console.log("insdie");
-            return res.status(401).json({ status: 401, data: [], error: JSON.stringify(err) });
+            return res.status(403).json({ status: 403, data: [], error: JSON.stringify(err) });
         }
 
         console.log("again Error when trying to post a service: ", err); // rremove
         console.log(typeof (err));
         res.status(500).json({ status: 500, data: [], error: err.message });
     };
+});
 
+// get service based on different filter critieris 
+router.post("/filter", async (req, res) => {
+    const tkn = getTknFromHeader(req.headers)
+    try {
+        console.log("Verifying token");
+        jwt.verify(tkn, process.env.JWT_SECRET);
+        let catId;
+        let charId;
+
+        const queryFilter = req.body;
+
+        if (queryFilter.category) {
+            catId = await getCategoryIdFromName(req.body.category, tkn)
+            queryFilter['CategoryId'] = catId;
+            delete queryFilter.category
+        }
+
+        if (queryFilter.charity) {
+            charId = await getCharityIdFromName(req.body.charity, tkn)
+            queryFilter['CharityId'] = charId;
+            delete queryFilter.charity
+        }
+        queryFilter['status'] = 'Active';
+
+        console.log("Get all services with filter param as: ", queryFilter);
+        const svcData = await Service.findAll({
+            include: [
+                { model: User, as: 'ServiceProvider' },
+                { model: User, as: 'Customer' }
+            ],
+            where: queryFilter,
+            order: [
+                ['serviceDate', 'ASC']
+            ]
+        });
+        const prunedResults = pruneActiveAndNotBookedServices(svcData);
+        console.log("Returning active svcs based on filter as: ", prunedResults);
+        res.status(200).json({ status: 200, data: prunedResults, err: "" })
+
+    } catch (err) {
+        console.log("Error when trying to get services by filter ", err);
+        if (err?.message === "invalid token" || err?.message === "jwt expired") {
+            return res.status(403).json({ status: 403, data: [], error: err });
+        }
+
+        res.status(500).json({ status: 500, data: [], error: err });
+    };
 
 });
 
