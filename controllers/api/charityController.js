@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     } catch (err) {
         console.log("Error when trying to get all charities: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
-            return res.status().json({ status: 403, data: [], error: err });
+            return res.status(403).json({ status: 403, data: [], error: err });
         }
 
         res.status(500).json({ status: 500, data: [], error: err });
