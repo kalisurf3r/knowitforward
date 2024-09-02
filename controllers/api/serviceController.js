@@ -215,7 +215,9 @@ router.get("/customer/:id", async (req, res) => {
 
         console.log("Get all services for customer with id as: ", req.params.id);
         const svcData = await Service.findAll({
-            include: [{ model: User, as: 'Customer' }],
+            include: [
+                { model: User, as: 'Customer' },
+                { model: User, as: 'ServiceProvider' }],
             where: {
                 CustomerId: req.params.id
             }
