@@ -61,7 +61,20 @@
         "paymentLink": null,
         "ServiceProviderId": 2,
         "CustomerId": null,
-        "CharityId": 6,
+        "CharityId": 3,
+        "CategoryId": 3
+    },
+    {
+        "title": "1hr Resume Review for Job Seekers",
+        "description": "Expert review of resumes for job seekers to help them land their desired jobs.",
+        "basePrice": 50.0,
+        "serviceDate": "2024-09-15T14:00:00Z",
+        "status": "Active",
+        "offerEndDate": "2024-09-13T23:59:59Z",
+        "paymentLink": null,
+        "ServiceProviderId": 2,
+        "CustomerId": null,
+        "CharityId": 2,
         "CategoryId": 3
     },
     {
@@ -87,7 +100,7 @@
         "paymentLink": null,
         "ServiceProviderId": 2,
         "CustomerId": null,
-        "CharityId": 6,
+        "CharityId": 1,
         "CategoryId": 3
     },
     {
@@ -100,20 +113,7 @@
         "paymentLink": null,
         "ServiceProviderId": 2,
         "CustomerId": null,
-        "CharityId": 6,
-        "CategoryId": 3
-    },
-    {
-        "title": "1hr Resume Review for Job Seekers",
-        "description": "Expert review of resumes for job seekers to help them land their desired jobs.",
-        "basePrice": 50.0,
-        "serviceDate": "2024-09-15T14:00:00Z",
-        "status": "Active",
-        "offerEndDate": "2024-09-13T23:59:59Z",
-        "paymentLink": null,
-        "ServiceProviderId": 2,
-        "CustomerId": null,
-        "CharityId": 6,
+        "CharityId": 4,
         "CategoryId": 3
     },
     {
