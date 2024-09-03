@@ -7,8 +7,8 @@ const { getTknFromHeader } = require("../../utils/util");
 router.get("/", async (req, res) => {
     const tkn = getTknFromHeader(req.headers)
     try {
-        console.log("Verifying token");
-        jwt.verify(tkn, process.env.JWT_SECRET);
+        // console.log("Verifying token");
+        // jwt.verify(tkn, process.env.JWT_SECRET);
         console.log("Get all categories");
         const caData = await Category.findAll();
 

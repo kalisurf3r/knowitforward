@@ -169,8 +169,8 @@ router.get("/:id", async (req, res) => {
     const tkn = getTknFromHeader(req.headers)
     try {
         console.log("Verifying token");
-        jwt.verify(tkn, process.env.JWT_SECRET);
-        console.log("Get service with id as: ", req.params.id);
+        // jwt.verify(tkn, process.env.JWT_SECRET);
+        // console.log("Get service with id as: ", req.params.id);
         const svcData = await Service.findByPk(req.params.id, {
             include: [
                 { model: User, as: 'ServiceProvider' },
@@ -345,9 +345,9 @@ router.post("/", async (req, res) => {
 router.post("/filter", async (req, res) => {
     const tkn = getTknFromHeader(req.headers)
     try {
-        console.log("Verifying token");
-        jwt.verify(tkn, process.env.JWT_SECRET);
-        let catId;
+        // console.log("Verifying token");
+        // jwt.verify(tkn, process.env.JWT_SECRET);
+        // let catId;
         let charId;
 
         const queryFilter = req.body;
