@@ -115,19 +115,39 @@ async function getCategoryIdFromName(name, tkn) {
 // get all active services after pruning the services that have expired and do not have a customerId associated to it
 router.get("/", async (req, res) => {
     const tkn = getTknFromHeader(req.headers)
-    try {
-        console.log("Verifying token");
-        jwt.verify(tkn, process.env.JWT_SECRET);
 
-        console.log("Get services with status as: Active");
-        const svcData = await Service.findAll({
-            where: {
-                status: 'Active'
-            },
-            order: [
-                ['serviceDate', 'ASC']
-            ]
-        });
+    try {
+        let svcData;
+        if (!tkn) {
+            console.log("Authentication not provided sending limited data");
+            svcData = await Service.findAll({
+                where: {
+                    status: 'Active'
+                },
+
+                order: [
+                    ['serviceDate', 'ASC']
+                ],
+                attributes: { exclude: ['paymentLink'] },
+                include: [
+                    { model: User, as: 'ServiceProvider' },
+                    { model: Category },
+                    { model: Charity },
+                ]
+            });
+        } else {
+            console.log("Verifying token");
+            jwt.verify(tkn, process.env.JWT_SECRET);
+            console.log("Get services with status as: Active while user is logged in");
+            svcData = await Service.findAll({
+                where: {
+                    status: 'Active'
+                },
+                order: [
+                    ['serviceDate', 'ASC']
+                ]
+            });
+        }
 
         const prunedResults = pruneActiveAndNotBookedServices(svcData);
         console.log("Returning active svcs as: ", prunedResults);
@@ -149,8 +169,8 @@ router.get("/:id", async (req, res) => {
     const tkn = getTknFromHeader(req.headers)
     try {
         console.log("Verifying token");
-        jwt.verify(tkn, process.env.JWT_SECRET);
-        console.log("Get service with id as: ", req.params.id);
+        // jwt.verify(tkn, process.env.JWT_SECRET);
+        // console.log("Get service with id as: ", req.params.id);
         const svcData = await Service.findByPk(req.params.id, {
             include: [
                 { model: User, as: 'ServiceProvider' },
@@ -325,9 +345,9 @@ router.post("/", async (req, res) => {
 router.post("/filter", async (req, res) => {
     const tkn = getTknFromHeader(req.headers)
     try {
-        console.log("Verifying token");
-        jwt.verify(tkn, process.env.JWT_SECRET);
-        let catId;
+        // console.log("Verifying token");
+        // jwt.verify(tkn, process.env.JWT_SECRET);
+        // let catId;
         let charId;
 
         const queryFilter = req.body;
