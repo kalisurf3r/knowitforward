@@ -74,8 +74,8 @@ function pruneActiveAndNotBookedServices(entries) {
 async function getCharityIdFromName(name, tkn) {
 
 
-    console.log("Verifying token");
-    jwt.verify(tkn, process.env.JWT_SECRET);
+    // console.log("Verifying token");
+    // jwt.verify(tkn, process.env.JWT_SECRET);
     console.log("Fetching charity details for charity with name: ", name);
     const data = await Charity.findOne({
         where: {
@@ -93,8 +93,8 @@ async function getCharityIdFromName(name, tkn) {
 
 async function getCategoryIdFromName(name, tkn) {
 
-    console.log("Verifying token");
-    jwt.verify(tkn, process.env.JWT_SECRET);
+    // console.log("Verifying token");
+    // jwt.verify(tkn, process.env.JWT_SECRET);
     console.log("Fetching category details for category with name: ", name);
     const data = await Category.findOne({
         where: {
