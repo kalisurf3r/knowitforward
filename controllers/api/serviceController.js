@@ -312,10 +312,11 @@ router.post("/", async (req, res) => {
         jwt.verify(tkn, process.env.JWT_SECRET);
         console.log("Setting status to Active");
         req.body.status = 'Active';
-
+        console.log(req.body);
         // get charity Id by charity name
         const charityid = await getCharityIdFromName(req.body.charity, tkn);
         req.body.CharityId = charityid;
+        
         delete req.body.charity;
 
 
