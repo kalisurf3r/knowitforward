@@ -11,8 +11,8 @@
         "charityName": "Save the Children",
         "charityDesc": "The Save the Children Fund, commonly known as Save the Children, is an international, non-governmental organization. It was founded in the UK in 1919, with the goal of helping improve the lives of children worldwide",
         "wallet": 700,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964710/save-the-children-logo_ffd3qp.png",
-        "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964710/save-the-children-logo_ffd3qp.png",
+        "logoImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725917875/Save_the_Children_tha2oj.webp",
+        "originalImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725917875/Save_the_Children_tha2oj.webp",
         "websiteUrl": "https://www.savethechildren.org/"
     },
     {
@@ -43,7 +43,7 @@
         "charityName": "Feeding America",
         "charityDesc": "Feeding America is a United States–based non-profit organization that is a nationwide network of more than 200 food banks that feed more than 46 million people through food pantries, soup kitchens, shelters, and other community-based agencies. Forbes ranks it as the largest U.S. charity by revenue.",
         "wallet": 1500,
-        "logoImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725547585/feedingamerica_mc7fqi.png",
+        "logoImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725914519/feeding-america-logo_v2iwlj.png",
         "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964708/feeding-america-logo_ng74xh.png",
         "websiteUrl": "https://www.feedingamerica.org/"
     }
