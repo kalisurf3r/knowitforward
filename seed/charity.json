@@ -3,7 +3,7 @@
         "charityName": "Unicef",
         "charityDesc": "UNICEF is on the ground in 190 countries and territories, providing children with the lifesaving supplies and assistance they desperately need.",
         "wallet": 500,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964711/UNICEF-logo_ctq9tt.png",
+        "logoImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/c_thumb,w_200,g_face/v1725547363/unicef_l9jll6.png",
         "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964711/UNICEF-logo_ctq9tt.png",
         "websiteUrl": "https://www.unicefusa.org/"
     },
@@ -43,7 +43,7 @@
         "charityName": "Feeding America",
         "charityDesc": "Feeding America is a United States–based non-profit organization that is a nationwide network of more than 200 food banks that feed more than 46 million people through food pantries, soup kitchens, shelters, and other community-based agencies. Forbes ranks it as the largest U.S. charity by revenue.",
         "wallet": 1500,
-        "logoImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/c_thumb,w_200,g_face/v1724964708/feeding-america-logo_ng74xh.png",
+        "logoImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725547585/feedingamerica_mc7fqi.png",
         "originalImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/v1724964708/feeding-america-logo_ng74xh.png",
         "websiteUrl": "https://www.feedingamerica.org/"
     }
