@@ -9,7 +9,11 @@ router.get("/", async (req, res) => {
         // console.log("Verifying token");
         // jwt.verify(tkn, process.env.JWT_SECRET);
         console.log("Get all charities");
-        const chData = await Charity.findAll();
+        const chData = await Charity.findAll({
+            order: [
+                ['charityName', 'ASC']
+            ]
+        });
 
         console.log("Get back charity data as: ", chData);
         res.status(200).json({ status: 200, data: chData, err: "" })

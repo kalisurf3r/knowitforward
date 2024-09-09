@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { User, Service, Charity, Category } = require("../../models");
 const jwt = require("jsonwebtoken");
 const { getTknFromHeader } = require("../../utils/util");
+const StripeHelper = require("../../utils/StripeHelper");
 
 //------ Helper methods ------
 function getTimeLeftInHumanReadableForm(diff) {
@@ -17,13 +18,13 @@ function getTimeLeftInHumanReadableForm(diff) {
     const seconds = Math.floor(diff / 1000);
 
     if (days > 0) {
-        return `${days} day(s) ${hours} hour(s)`;
+        return `${days} d ${hours} h`;
     } else if (hours > 0) {
-        return `${hours} hour(s) ${minutes} minute(s)`;
+        return `${hours} h ${minutes} m`;
     } else if (minutes > 0) {
-        return `${minutes} minute(s) ${seconds} second(s)`;
+        return `${minutes} m ${seconds} s`;
     } else {
-        return `${seconds} second(s)`;
+        return `${seconds} s`;
     }
 }
 
@@ -111,9 +112,27 @@ async function getCategoryIdFromName(name, tkn) {
 }
 
 
-// ------ Routes ------
-// get all active services after pruning the services that have expired and do not have a customerId associated to it
-router.get("/", async (req, res) => {
+async function getSvcDetailsById(svcId) {
+
+    try {
+        const svcData = await Service.findByPk(svcId, {
+            include: [
+                { model: User, as: 'ServiceProvider' },
+                { model: User, as: 'Customer' },
+                { model: Category },
+                { model: Charity },
+            ]
+        });
+
+        return svcData;
+
+    } catch (err) {
+        console.log("Error from helper function while querying the db: ", err);
+        throw new Error("Error from helper function while querying the db: " + JSON.stringify(err));
+    };
+}
+
+async function getAllServices(req, res) {
     const tkn = getTknFromHeader(req.headers)
 
     try {
@@ -131,6 +150,7 @@ router.get("/", async (req, res) => {
                 attributes: { exclude: ['paymentLink'] },
                 include: [
                     { model: User, as: 'ServiceProvider' },
+                    { model: User, as: 'Customer' },
                     { model: Category },
                     { model: Charity },
                 ]
@@ -143,8 +163,15 @@ router.get("/", async (req, res) => {
                 where: {
                     status: 'Active'
                 },
+
                 order: [
                     ['serviceDate', 'ASC']
+                ],
+                attributes: { exclude: ['paymentLink'] },
+                include: [
+                    { model: User, as: 'ServiceProvider' },
+                    { model: Category },
+                    { model: Charity },
                 ]
             });
         }
@@ -162,24 +189,25 @@ router.get("/", async (req, res) => {
         res.status(500).json({ status: 500, data: [], error: err });
     };
 
+}
+
+
+// ------ Routes ------
+// get all active services after pruning the services that have expired and do not have a customerId associated to it
+router.get("/", async (req, res) => {
+    await getAllServices(req, res);
 });
+
 
 // get svc details by id
 router.get("/:id", async (req, res) => {
-    const tkn = getTknFromHeader(req.headers)
+    // await getSvcDetailsById(req, res);
+
     try {
-        console.log("Verifying token");
-        // jwt.verify(tkn, process.env.JWT_SECRET);
-        // console.log("Get service with id as: ", req.params.id);
-        const svcData = await Service.findByPk(req.params.id, {
-            include: [
-                { model: User, as: 'ServiceProvider' },
-                { model: User, as: 'Customer' }
-            ],
-        });
-
-        res.status(200).json({ status: 200, data: svcData, err: "" })
-
+        console.log("Invoking fucntion to get svcs by id");
+        const data = await getSvcDetailsById(req.params.id);
+        console.log(data);
+        res.status(200).json({ status: 200, data: data, err: "" })
     } catch (err) {
         console.log("Error when trying to get a svc id: ", err);
         if (err?.message === "invalid token" || err?.message === "jwt expired") {
@@ -188,7 +216,6 @@ router.get("/:id", async (req, res) => {
 
         res.status(500).json({ status: 500, data: [], error: err });
     };
-
 });
 
 // get service details by provider id
@@ -245,7 +272,7 @@ router.get("/customer/:id", async (req, res) => {
                 CustomerId: req.params.id
             },
             order: [
-                ['serviceDate', 'ASC']
+                ['serviceDate', 'DESC']
             ]
         });
         const prunedResults = pruneActiveAndNotBookedServices(svcData);
@@ -267,6 +294,7 @@ router.get("/customer/:id", async (req, res) => {
 // active -> booked -> ready for payment ->  closed
 router.put("/:id", async (req, res) => {
     const tkn = getTknFromHeader(req.headers)
+    let paymentLink;
     try {
         console.log("Verifying token");
         jwt.verify(tkn, process.env.JWT_SECRET);
@@ -281,8 +309,18 @@ router.put("/:id", async (req, res) => {
         } else if (action.toLowerCase() === "done") {
             fieldsToUpdate['status'] = 'Ready for payment';
             // TODO: Generate the payment link for this service and update DB
+            // create payment link
+            const stripeObj = new StripeHelper(req.params.id);
+            paymentLink = await stripeObj.createAndUpdatePaymentLink();
+            console.log(`got back payment link for svc id: ${req.params.id} in the controller as: ${paymentLink}`)
+            // get the payment link
+            // update db with the payment link agaisnt the service
+
         } else if (action.toLowerCase() === "cancel") {
             fieldsToUpdate['status'] = 'Closed';
+        }
+        if (paymentLink) {
+            fieldsToUpdate['paymentLink'] = paymentLink;
         }
         let data = [];
         if (fieldsToUpdate) {
@@ -322,7 +360,7 @@ router.post("/", async (req, res) => {
         // get charity Id by charity name
         const charityid = await getCharityIdFromName(req.body.charity, tkn);
         req.body.CharityId = charityid;
-        
+
         delete req.body.charity;
 
 
@@ -399,4 +437,8 @@ router.post("/filter", async (req, res) => {
 });
 
 
-module.exports = router;
+module.exports = {
+    router,
+    getAllServices,
+    getSvcDetailsById
+}
