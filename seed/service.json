@@ -166,7 +166,7 @@
         "ServiceProviderId": 3,
         "CustomerId": null,
         "CharityId": 5,
-        "CategoryId": 6
+        "CategoryId": 4
     },
     {
         "title": "1hr guitar Lessons for a group of 4 Children",
@@ -179,7 +179,7 @@
         "ServiceProviderId": 3,
         "CustomerId": null,
         "CharityId": 3,
-        "CategoryId": 6
+        "CategoryId": 5
     },
     {
         "title": "1hr piano Lessons for a group of 4 Children",
@@ -283,7 +283,7 @@
             "ServiceProviderId": 1,
             "CustomerId": null,
             "CharityId": 4,
-            "CategoryId": 1
+            "CategoryId": 7
         },
         {
             "title": "2hr Coding Workshop for Teen Girls",
@@ -296,7 +296,7 @@
             "ServiceProviderId": 2,
             "CustomerId": null,
             "CharityId": 5,
-            "CategoryId": 2
+            "CategoryId": 6
         },
         {
             "title": "1hr Science Exploration Session for Elementary Students",
@@ -387,7 +387,7 @@
             "ServiceProviderId": 9,
             "CustomerId": null,
             "CharityId": 12,
-            "CategoryId": 9
+            "CategoryId": 8
         },
         {
             "title": "1hr Dance Class for Underprivileged Children",
@@ -400,7 +400,7 @@
             "ServiceProviderId": 10,
             "CustomerId": null,
             "CharityId": 13,
-            "CategoryId": 10
+            "CategoryId": 6
         },
         {
             "title": "1hr Yoga Session for Underprivileged Teens",
@@ -413,7 +413,7 @@
             "ServiceProviderId": 11,
             "CustomerId": null,
             "CharityId": 14,
-            "CategoryId": 11
+            "CategoryId": 7
         },
         {
             "title": "2hr Financial Literacy Workshop for High School Students",
@@ -426,7 +426,7 @@
             "ServiceProviderId": 12,
             "CustomerId": null,
             "CharityId": 15,
-            "CategoryId": 12
+            "CategoryId": 8
         },
         {
             "title": "3hr STEM Workshop for Girls",
@@ -439,7 +439,7 @@
             "ServiceProviderId": 13,
             "CustomerId": null,
             "CharityId": 16,
-            "CategoryId": 13
+            "CategoryId": 3
         },
         {
             "title": "1hr Mental Health Awareness Session for Teens",
@@ -452,7 +452,7 @@
             "ServiceProviderId": 14,
             "CustomerId": null,
             "CharityId": 17,
-            "CategoryId": 14
+            "CategoryId": 4
         },
         {
             "title": "1hr Mindfulness Workshop for Children",
@@ -465,7 +465,7 @@
             "ServiceProviderId": 15,
             "CustomerId": null,
             "CharityId": 18,
-            "CategoryId": 15
+            "CategoryId": 1
         },
         {
             "title": "1hr Geography Class for Underprivileged Teens",
@@ -478,7 +478,7 @@
             "ServiceProviderId": 16,
             "CustomerId": null,
             "CharityId": 19,
-            "CategoryId": 16
+            "CategoryId": 6
         },
         {
             "title": "1hr History Class on Ancient Civilizations",
@@ -491,7 +491,7 @@
             "ServiceProviderId": 17,
             "CustomerId": null,
             "CharityId": 20,
-            "CategoryId": 17
+            "CategoryId": 5
         },
         {
             "title": "2hr Leadership Skills Workshop for High School Students",
@@ -504,7 +504,7 @@
             "ServiceProviderId": 18,
             "CustomerId": null,
             "CharityId": 21,
-            "CategoryId": 18
+            "CategoryId": 7
         },
         {
             "title": "1hr Special Needs Support Session for Teachers",
@@ -517,6 +517,6 @@
             "ServiceProviderId": 19,
             "CustomerId": null,
             "CharityId": 22,
-            "CategoryId": 19
+            "CategoryId": 8
         }
 ]
