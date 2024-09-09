@@ -59,6 +59,10 @@ router.post("/", async (req, res) => {
         delete req.body.username;
         delete req.body.password;
 
+        if (!req.body.img) {
+            req.body.img = './utils/avatar.png';
+        }
+
         console.log("Verifying a recond does not exist with the same username");
         const foundUname = await Auth.findOne({
             where: {
