@@ -1,72 +1,65 @@
 [
     {
-        "firstName": "Jane",
-        "lastName": "Doe",
-        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
-        "email": "jado@gmail.com",
-        "ratings": 5.0,
-        "profession": "Software development, math tutor",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964284/person1_cw7hxz.jpg",
-        "calendarUrl": null
-    },
-    {
-        "firstName": "Jessica",
-        "lastName": "Johnson",
-        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
-        "email": "jj@gmail.com",
-        "ratings": 5.0,
-        "profession": "UI/UX instructor, wellness and career coach",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
-        "calendarUrl": null
-    },
-    {
         "firstName": "John",
-        "lastName": "Paul",
-        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
-        "email": "jp@gmail.com",
-        "ratings": 5.0,
-        "profession": "Teacher and Music instructor",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964339/person2_rrtvou.jpg",
-        "calendarUrl": null
+        "lastName": "Doe",
+        "aboutMe": "Experienced guitar teacher with a passion for helping students learn music. Offering lessons for all age groups.",
+        "email": "john.doe@example.com",
+        "ratings": 4.8,
+        "profession": "Music Teacher",
+        "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725510186/eesudolxsy1bm8nwtb6n.jpg"
     },
     {
-        "firstName": "Jim",
-        "lastName": "Parsons",
-        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
-        "email": "jimpa@gmail.com",
-        "ratings": 5.0,
-        "profession": null,
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
-        "calendarUrl": null
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "aboutMe": "Career counselor with over 10 years of experience in the IT industry. Helping people navigate their careers effectively.",
+        "email": "jane.smith@example.com",
+        "ratings": 4.9,
+        "profession": "Career Counselor",
+        "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725828727/o5rh8dgt6ep9a5jhiocb.jpg"
     },
     {
-        "firstName": "Sheldon",
-        "lastName": "Cooper",
-        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
-        "email": "sc@gmail.com",
-        "ratings": 5.0,
-        "profession": "Chartered Accountant",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
-        "calendarUrl": null
+        "firstName": "Alex",
+        "lastName": "Johnson",
+        "aboutMe": "Wellness coach dedicated to improving the mental and physical health of clients. Specializing in meditation and fitness.",
+        "email": "alex.johnson@example.com",
+        "ratings": 4.7,
+        "profession": "Wellness Coach",
+        "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725381720/qfzxthcwtkn15u4kpljy.jpg"
     },
     {
-        "firstName": "Leonard ",
-        "lastName": "Hofstadter",
-        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
-        "email": "lha@gmail.com",
-        "ratings": 5.0,
+        "firstName": "Emily",
+        "lastName": "Davis",
+        "aboutMe": "Software developer with a knack for teaching. Offering coding lessons to aspiring developers, focusing on JavaScript and Python.",
+        "email": "emily.davis@example.com",
+        "ratings": 4.9,
+        "profession": "Software Developer",
+        "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725267798/ia7uifuhgn8bss546pyg.jpg"
+    },
+    {
+        "firstName": "Michael",
+        "lastName": "Brown",
+        "aboutMe": "Professional photographer with over 15 years of experience. Offering photography classes for beginners and advanced learners.",
+        "email": "michael.brown@example.com",
+        "ratings": 4.8,
         "profession": "Photographer",
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
-        "calendarUrl": null
+        "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725919861/person7_iiwkxl.jpg"
     },
     {
-        "firstName": "Penny",
-        "lastName": "P",
-        "aboutMe": "Lorem ipsum dolor sit amet consectetur adipiscing, elit auctor nisl conubia sapien curabitur, cum montes maecenas senectus gravida. Suscipit molestie sagittis luctus ad ullamcorper ante commodo blandit vestibulum, senectus diam parturient metus interdum egestas mattis. Magna metus egestas ligula fusce parturient laoreet nulla vitae pulvinar, in id scelerisque lectus massa ut est diam inceptos litora, leo luctus sagittis ante aenean odio cum felis",
-        "email": "penny@gmail.com",
+        "firstName": "Olivia",
+        "lastName": "Taylor",
+        "aboutMe": "Therapist focused on helping people manage stress and anxiety. Offering online therapy sessions for individuals and couples.",
+        "email": "olivia.taylor@example.com",
         "ratings": 5.0,
-        "profession": null,
-        "profileImgUrl": "https://res.cloudinary.com/dm0af4bu9/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1724964366/person3_bdceyg.jpg",
-        "calendarUrl": null
+        "profession": "Therapist",
+        "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725263610/ngltweqnkrlmu86l4x1n.jpg"
+    },
+    {
+        "firstName": "David",
+        "lastName": "Williams",
+        "aboutMe": "Finance expert with over 20 years of experience. Helping people manage their finances, investments, and plan for the future.",
+        "email": "david.williams@example.com",
+        "ratings": 4.6,
+        "profession": "Financial Advisor",
+        "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725919941/person8_bgpodn.jpg"
     }
 ]
