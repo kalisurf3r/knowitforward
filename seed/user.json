@@ -3,7 +3,7 @@
         "firstName": "John",
         "lastName": "Doe",
         "aboutMe": "Experienced guitar teacher with a passion for helping students learn music. Offering lessons for all age groups.",
-        "email": "john.doe@example.com",
+        "email": "john.doe@gmail.com",
         "ratings": 4.8,
         "profession": "Music Teacher",
         "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725510186/eesudolxsy1bm8nwtb6n.jpg"
@@ -12,7 +12,7 @@
         "firstName": "Jane",
         "lastName": "Smith",
         "aboutMe": "Career counselor with over 10 years of experience in the IT industry. Helping people navigate their careers effectively.",
-        "email": "jane.smith@example.com",
+        "email": "jane.smith@gmail.com",
         "ratings": 4.9,
         "profession": "Career Counselor",
         "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725828727/o5rh8dgt6ep9a5jhiocb.jpg"
@@ -21,7 +21,7 @@
         "firstName": "Alex",
         "lastName": "Johnson",
         "aboutMe": "Wellness coach dedicated to improving the mental and physical health of clients. Specializing in meditation and fitness.",
-        "email": "alex.johnson@example.com",
+        "email": "alex.johnson@gmail.com",
         "ratings": 4.7,
         "profession": "Wellness Coach",
         "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725381720/qfzxthcwtkn15u4kpljy.jpg"
@@ -30,7 +30,7 @@
         "firstName": "Emily",
         "lastName": "Davis",
         "aboutMe": "Software developer with a knack for teaching. Offering coding lessons to aspiring developers, focusing on JavaScript and Python.",
-        "email": "emily.davis@example.com",
+        "email": "emily.davis@gmail.com",
         "ratings": 4.9,
         "profession": "Software Developer",
         "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725267798/ia7uifuhgn8bss546pyg.jpg"
@@ -39,7 +39,7 @@
         "firstName": "Michael",
         "lastName": "Brown",
         "aboutMe": "Professional photographer with over 15 years of experience. Offering photography classes for beginners and advanced learners.",
-        "email": "michael.brown@example.com",
+        "email": "michael.brown@gmail.com",
         "ratings": 4.8,
         "profession": "Photographer",
         "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725919861/person7_iiwkxl.jpg"
@@ -48,7 +48,7 @@
         "firstName": "Olivia",
         "lastName": "Taylor",
         "aboutMe": "Therapist focused on helping people manage stress and anxiety. Offering online therapy sessions for individuals and couples.",
-        "email": "olivia.taylor@example.com",
+        "email": "olivia.taylor@gmail.com",
         "ratings": 5.0,
         "profession": "Therapist",
         "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725263610/ngltweqnkrlmu86l4x1n.jpg"
@@ -57,7 +57,7 @@
         "firstName": "David",
         "lastName": "Williams",
         "aboutMe": "Finance expert with over 20 years of experience. Helping people manage their finances, investments, and plan for the future.",
-        "email": "david.williams@example.com",
+        "email": "david.williams@gmail.com",
         "ratings": 4.6,
         "profession": "Financial Advisor",
         "profileImgUrl": "https://res.cloudinary.com/dwfvmcziw/image/upload/v1725919941/person8_bgpodn.jpg"

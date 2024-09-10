@@ -272,7 +272,7 @@ router.get("/customer/:id", async (req, res) => {
                 CustomerId: req.params.id
             },
             order: [
-                ['serviceDate', 'DESC']
+                ['serviceDate', 'ASC']
             ]
         });
         const prunedResults = pruneActiveAndNotBookedServices(svcData);
